@@ -1,0 +1,8 @@
+<view class="cu-bar bg-white solid-bottom {{extraClass}}" bindtap="click">
+    <view class="action">
+      <text class="cuIcon-title {{color?'text-'+color:''}}"></text>{{title}}
+    </view>
+    <view class="action">
+      <slot></slot>
+    </view>
+  </view>

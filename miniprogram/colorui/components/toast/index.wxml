@@ -1,0 +1,5 @@
+<view class="fixed-center" hidden="{{!show}}">
+  <view class="padding animation-slide-top {{status == 'success' ? 'bg-green light':'bg-red light'}}">
+  {{message}}
+</view>
+</view>

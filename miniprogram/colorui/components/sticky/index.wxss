@@ -1,0 +1,6 @@
+.box{
+  position: sticky;
+  z-index: 99;
+  /* background: #fff;
+  padding-top: 20rpx; */
+}

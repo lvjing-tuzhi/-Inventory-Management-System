@@ -1,0 +1,114 @@
+<block wx:if="{{type == 'case'}}">
+  <view class="{{column == 2? 'double-column': ''}}">
+    <view class="cu-card case {{isCard?'no-card':''}}" wx:for="{{_data}}">
+      <l-skeleton loading="{{item.loading}}" column="4" columnWidth="{{['60%','90%','70%','70%']}}" endHeight="200rpx">
+        <view class="cu-item shadow">
+          <view class="image">
+            <image src="{{item.image}}" mode="{{mode}}"></image>
+            <l-tag bgColor="{{item.tagColor}}" light="{{item.light}}">{{item.tagName}}</l-tag>
+            <view class="cu-bar bg-shadeBottom">
+              <text class="text-cut">{{item.title}}</text>
+            </view>
+          </view>
+          <view class="cu-list menu-avatar">
+            <view class="cu-item">
+              <view class="cu-avatar round lg">
+                <image src="{{item.avatar}}" mode="aspectFit" class="bg" />
+              </view>
+              <view class="content flex-sub">
+                <view class="text-grey">{{item.name}}</view>
+                <view class="text-gray text-sm flex justify-between">
+                  {{item.time}}
+                  <view class="text-gray text-sm">
+                    <block wx:for="{{item.tags}}" wx:for-item="child">
+                      <l-icon name="{{child.name}}" extraClass="margin-lr-xs"></l-icon>
+                      {{child.num}}
+                    </block>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </l-skeleton>
+    </view>
+  </view>
+</block>
+<block wx:if="{{type == 'dynamic'}}">
+  <view class="cu-card dynamic {{isCard?'no-card':''}}" wx:for="{{_data}}">
+    <view class="cu-item shadow">
+      <view class="cu-list menu-avatar">
+        <view class="cu-item">
+          <view class="cu-avatar round lg" style="background-image:url({{item.avatar}});"></view>
+          <view class="content flex-sub">
+            <view>{{item.name}}</view>
+            <view class="text-gray text-sm flex justify-between">
+              {{item.time}}
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="text-content">
+        {{item.content}}
+      </view>
+      <view class="grid flex-sub padding-lr {{isCard?'col-3 grid-square':'col-1'}}">
+        <view class="bg-img {{isCard?'':'only-img'}}" style="background-image:url({{item.avatar}});">
+        </view>
+      </view>
+      <view class="text-gray text-sm text-right padding">
+        <block wx:for="{{item.tags}}" wx:for-item="child">
+          <l-icon name="{{child.name}}" extraClass="margin-lr-xs"></l-icon>
+          {{child.num}}
+        </block>
+      </view>
+      <view class="cu-list menu-avatar comment solids-top" wx:for="{{item.message}}" wx:for-item="child">
+        <view class="cu-item">
+          <view class="cu-avatar round" style="background-image:url({{child.avatar}});"></view>
+          <view class="content">
+            <view class="text-grey">{{child.name}}</view>
+            <view class="text-gray text-content text-df">
+              {{child.comment}}
+            </view>
+            <view class="bg-grey padding-sm radius margin-top-sm  text-sm">
+              <view class="flex">
+                <view>{{child.replyName}}：</view>
+                <view class="flex-sub">{{child.reply}}</view>
+              </view>
+            </view>
+            <view class="margin-top-sm flex justify-between">
+              <view class="text-gray text-df">{{child.time}}</view>
+              <view>
+                <block wx:for="{{child.tags}}" wx:for-item="childs">
+                  <l-icon name="{{childs.name}}" textColor="gray" extraClass="margin-lr-xs"></l-icon>
+                  {{childs.num}}
+                </block>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+<block wx:if="{{type == 'article'}}">
+  <view class="cu-card article {{isCard?'no-card':''}}" wx:for="{{_data}}">
+    <l-skeleton loading="{{item.loading}}" avatar column="4" columnWidth="{{['60%','90%','70%','70%']}}"
+      endHeight="200rpx">
+      <view class="cu-item shadow">
+        <view class="title">
+          <view class="text-cut">{{item.title}}</view>
+        </view>
+        <view class="content">
+          <image src="{{item.image}}" mode="aspectFill"></image>
+          <view class="desc">
+            <view class="text-content">{{item.content}}</view>
+            <view>
+              <l-tag bgColor="{{child.bgColor}}" round sm light wx:for="{{item.tags}}"
+                wx:for-item="child" >{{child.name}}</l-tag>
+            </view>
+          </view>
+        </view>
+      </view>
+      </l-skeleton>
+    </view>
+</block>

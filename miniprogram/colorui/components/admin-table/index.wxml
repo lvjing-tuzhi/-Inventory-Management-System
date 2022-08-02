@@ -1,0 +1,27 @@
+<view class="table">
+  <view class="grid">
+    <view class="tr" wx:for="{{header}}">
+      <view class="th">
+        {{item.cover}}
+      </view>
+      <view class="th">{{item.name}}</view>
+      <view class="th" wx:if="{{item.time}}">{{item.time}}</view>
+      <view class="th">操作列表</view>
+    </view>
+    <view class="tr" wx:for="{{list}}">
+      <view class="td" wx:if="{{cover}}">
+        <image class="cu-avatar lg" src="{{item.cover}}"></image>
+      </view>
+      <view class="td name">{{item.name}}</view>
+      <view class="td">{{item.time}}</view>
+      <view class="td tools">
+        <button class="cu-btn sm bg-olive button-hover" hidden="{{!show}}" data-_id="{{item._id}}" data-item="{{item}}"
+          bindtap="action" data-action='show'>查看</button>
+        <button class="cu-btn sm bg-cyan button-hover" hidden="{{!update}}" data-_id="{{item._id}}" bindtap="action"
+          data-action='update'>修改</button>
+        <button class="cu-btn sm bg-red button-hover" hidden="{{!del}}" data-_id="{{item._id}}" bindtap="action"
+          data-action='del'>删除</button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+var format = {
+  multipleFormat: function (data) {
+    data = +data;
+    if(data == 1){
+      data = 'sub'
+    }
+    if(data == 2){
+      data = 'twice'
+    }
+    if(data == 3){
+      data = 'treble'
+    }
+    return data;
+  },
+}
+// 导出对外暴露的属性
+module.exports = {
+  multipleFormat: format.multipleFormat,
+}

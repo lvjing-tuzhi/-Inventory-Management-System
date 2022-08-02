@@ -1,0 +1,4 @@
+<wxs module="utils" src="./format.wxs"></wxs>
+<view class="flex-{{utils.multipleFormat(multiple)}} {{extraClass}}">
+  <slot />
+</view>

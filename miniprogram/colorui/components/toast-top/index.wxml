@@ -1,0 +1,3 @@
+<view class="cu-load bg-red {{status == 'success' ? 'bg-green':'bg-red'}}"  animation="{{animation}}" style="height: 0">
+<text class="cuIcon-roundclose lg padding-right-xs" hidden="{{!status == 'error'}}"></text>{{message}}
+</view>

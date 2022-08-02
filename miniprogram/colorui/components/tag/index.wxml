@@ -1,0 +1,3 @@
+<view
+  class="cu-tag {{round?'round':''}} {{radius?'radius':''}}{{sm?'sm':''}} {{bgColor?'bg-'+bgColor:''}} {{line?'line-'+line:''}} {{light?'light':''}}">
+  <slot/></view>

@@ -1,0 +1,7 @@
+<view class="box">
+  <view class="top" hidden="{{!show}}" bindtap="click">
+    <view class="text bg-olive">{{text}}</view>
+    <view class="shape"></view>
+  </view>
+  <slot />
+</view>

@@ -1,0 +1,1 @@
+"D:\微信web开发者工具\cli.bat" cloud functions deploy --e cloud1-5gwxxf5g3f67dbeb --n quickstartFunctions --r --project "C:\Users\Lenovo\Desktop\诱惑女装云开发" --report_start --report

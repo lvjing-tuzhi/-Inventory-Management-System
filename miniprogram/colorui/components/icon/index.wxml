@@ -1,0 +1,3 @@
+<text 
+class="{{name?'cuIcon-'+name:''}} {{extraClass}} {{textColor?'text-'+textColor:''}}"
+style="font-size:{{size?size:''}}"></text>

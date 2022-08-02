@@ -1,0 +1,46 @@
+
+.input {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* background-color: skyblue; */
+  height: 90rpx;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  z-index: 4;
+  /*1为直播界面，2为弹幕，3为菜单栏，4为输入框*/
+}
+
+.inp {
+  height: 100%;
+  width: 82%;
+  box-sizing: border-box;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  padding-left: 15rpx;
+}
+
+.inp input {
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  padding-left: 20rpx;
+  font-size: 32rpx;
+}
+
+.inp-placeholder {
+  font-size: 32rpx;
+  z-index: 0;
+}
+
+.send {
+  width: 80rpx;
+  background-color: #000;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  flex-grow: 1;
+  font-size: 26rpx;
+}

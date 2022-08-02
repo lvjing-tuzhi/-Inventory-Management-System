@@ -1,0 +1,30 @@
+.box{
+  position: relative;
+}
+.top{
+  position: absolute;
+  color: #fff;
+  height: 75rpx;
+  z-index: 2;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  top: -20rpx;
+}
+
+.shape{
+	width:0;
+	height:0;
+	border-right:10px solid transparent;
+	border-left:10px solid transparent;
+  margin-left: 25rpx;
+  border-top:10px solid #8dc63f;
+  margin: auto;
+}
+.text{
+  border-radius: 10rpx;
+  padding: 10rpx;
+  min-width: 85rpx;
+  font-size: 28rpx;
+  text-align: center;
+  background-color: #8dc63f;
+}

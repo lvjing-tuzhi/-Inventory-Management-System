@@ -1,0 +1,3 @@
+<view class="cu-progress {{xs ? 'xs' : ''}} {{sm ? 'sm' : ''}} {{striped?'striped':''}} {{active?'active':''}} {{extraClass}}">
+  <view class="bg-{{bg}}" style="width:{{loading?value:''}};">{{value}}</view>
+</view>

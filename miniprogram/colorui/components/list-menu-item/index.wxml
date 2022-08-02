@@ -1,0 +1,8 @@
+<view class="cu-item {{menuArrow?'arrow':''}}">
+  <view class="content">
+    <slot name="left"></slot>
+  </view>
+  <view class="action">
+    <slot name="right"></slot>
+  </view>
+</view>

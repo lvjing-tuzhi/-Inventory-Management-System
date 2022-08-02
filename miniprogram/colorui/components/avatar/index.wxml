@@ -1,0 +1,4 @@
+<view class="cu-avatar {{bg?'bg-' + bg:''}} {{extraClass}} {{round?'round':''}} {{radius?'radius':''}} {{sm?'sm':''}} {{lg?'lg':''}} {{xl?'xl':''}}"
+  style="background-image:url({{src}});">
+  <slot></slot>
+</view>

@@ -1,0 +1,14 @@
+<button wx:if="{{!block}}"
+  class="cu-btn {{round?'round':''}} {{radius?'radius':''}}{{icon?'icon':''}}{{sm?'sm':''}}{{shadow?'shadow':''}}{{bgColor?'bg-'+bgColor:''}} {{line?'line-'+line:''}} {{lines?'lines-'+lines:''}}"
+  disabled="{{disabled}}">
+  <text class="cuIcon-loading2 iconfont-spin" wx:if="{{loading}}"></text>
+  <slot />
+</button>
+<view class="padding flex flex-direction" wx:if="{{block}}">
+  <button
+    class="cu-btn {{round?'round':''}} {{radius?'radius':''}}{{icon?'icon':''}}{{sm?'sm':''}}{{shadow?'shadow':''}}{{bgColor?'bg-'+bgColor:''}} {{line?'line-'+line:''}} {{lines?'lines-'+lines:''}}"
+    disabled="{{disabled}}">
+    <text class="cuIcon-loading2 iconfont-spin" wx:if="{{loading}}"></text>
+    <slot />
+  </button>
+</view>

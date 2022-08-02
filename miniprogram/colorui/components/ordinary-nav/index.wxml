@@ -1,0 +1,8 @@
+
+  <view style="height: {{titleBarHeight}}rpx;padding-top: {{statusBarHeight}}rpx;" 
+  class="{{isLucency == true?'lucency':'black'}} {{white == true?'white':''}}">
+  <view class="nav">
+    <!-- <van-icon name="arrow-left" size="20px" class="reload" catch:tap="goBack" wx:if="{{isBack}}"/> -->
+    <slot></slot>
+  </view>
+</view>

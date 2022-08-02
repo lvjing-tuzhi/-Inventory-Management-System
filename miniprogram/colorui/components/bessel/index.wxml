@@ -1,0 +1,10 @@
+
+<view class="praise">
+  <view class="praise_bubble">
+  <view wx:for="{{element}}" class="{{item.className}}">
+    <image src="{{item.image}}" class="like_image"></image>
+  </view>
+</view>
+<image src="../../images/live/like.png" class="bt-img" 
+bindtap="onClickImage" style="{{style_animation}}"></image>
+</view>

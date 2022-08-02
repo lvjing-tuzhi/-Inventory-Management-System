@@ -1,0 +1,6 @@
+<scroll-view scroll-x class="bg-white nav text-center fixed" style="top:{{CustomBar}}px">
+  <view class="cu-item {{index==TabCur?'text-blue cur':''}}" wx:for="{{tabNav}}" wx:key bindtap='tabSelect'
+    data-index="{{index}}">
+    {{tabNav[index]}}
+  </view>
+</scroll-view>

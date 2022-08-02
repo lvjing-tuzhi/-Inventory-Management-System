@@ -1,0 +1,12 @@
+<view class="container">
+  <view class="left">
+    <view class="flow">
+      <l-waterfall-flow-item data="{{leftData}}" />
+    </view>
+  </view>
+  <view class="right">
+    <view class="flow">
+      <l-waterfall-flow-item data="{{rightData}}" />
+    </view>
+  </view>
+</view>

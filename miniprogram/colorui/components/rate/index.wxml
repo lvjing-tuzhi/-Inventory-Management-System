@@ -1,0 +1,3 @@
+<view class="rate padding">
+  <l-icon wx:for="{{count}}" name="{{index > active ? 'favor' : 'favorfill'}}" size="50rpx" textColor="red" bindtap="click" data-index="{{index}}"/>
+</view>

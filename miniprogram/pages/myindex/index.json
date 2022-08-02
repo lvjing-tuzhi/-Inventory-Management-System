@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "basics": "/pages/myhome/index",
+    "about": "/pages/mypeople/index"
+  }
+}

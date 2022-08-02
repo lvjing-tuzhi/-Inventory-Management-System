@@ -1,0 +1,3 @@
+<view class="grid {{col?'col-'+col:''}} {{extraClass}} {{square?'grid-square':''}}">
+  <slot />
+</view>

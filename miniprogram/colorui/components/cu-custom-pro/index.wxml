@@ -1,0 +1,30 @@
+<view class="cu-custom {{isLucency == true?'lucency':''}}" style="height:{{isLucency == true?0:CustomBar}}px">
+  <view class="cu-bar {{noFixed ? '' : 'fixed'}} {{bgImage!=''?'none-bg text-white bg-img':''}} {{bgColor}}"
+    style="height:{{CustomBar}}px;padding-top:{{StatusBar}}px;{{bgImage?'background-image:url(' + bgImage+')':''}};background-color:{{myBgColor}};">
+    <!-- My: 返回上一页面 -->
+    <view class="action" wx:if="{{isBack}}" bindtap="BackPage">
+      <text class="cuIcon-back" style="color:#fff"></text>
+      <slot name="backText"></slot>
+    </view>
+    <!-- My: 返回首页 -->
+    <view class="action" wx:if="{{isHome}}" bindtap="BackHome">
+      <text class="cuIcon-back"></text>
+      <slot name="backText"></slot>
+    </view>
+    <!-- My: 左边自定义 -->
+    <view class="action" wx:if="{{isLeftCustom}}">
+      <slot name="leftCustom"></slot>
+    </view>
+    <!-- 官方：左边返回及返回首页 -->
+    <view class="action border-custom" wx:if="{{isCustom}}"
+      style="width:{{Custom.width}}px;height:{{Custom.height}}px;margin-left:calc(750rpx - {{Custom.right}}px)">
+      <text class="cuIcon-back" bindtap="BackPage"></text>
+      <text class="cuIcon-homefill" bindtap="toHome"></text>
+    </view>
+    <!-- My: 取消中间 -->
+    <view class="content" style="top:{{StatusBar}}px" wx:if="{{isContent}}">
+      <slot name="content"></slot>
+    </view>
+    <slot name="right"></slot>
+  </view>
+</view>

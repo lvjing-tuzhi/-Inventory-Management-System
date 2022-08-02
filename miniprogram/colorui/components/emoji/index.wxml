@@ -1,0 +1,6 @@
+    <view class="emojis">
+          <view wx:for="{{emojiName}}" class="emoji" 
+            data-data="{{item}}"  key="index" bindtap="chooseEmoji">
+            <image src="{{emojiUrl + emojiMap[item]}}" style="width:30px;height:30px" />
+          </view>
+        </view>

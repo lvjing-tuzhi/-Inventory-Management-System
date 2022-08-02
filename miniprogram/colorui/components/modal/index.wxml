@@ -1,0 +1,58 @@
+<block wx:if="{{type == ''}}">
+  <view class="cu-modal {{show ?'show':''}}" bindtap="hideModal">
+    <view class="cu-dialog">
+      <view class="cu-bar bg-white justify-end">
+        <view class="content">{{title}}</view>
+        <view class="action" bindtap="hideModal">
+          <text class="cuIcon-close text-red"></text>
+        </view>
+      </view>
+      <slot name="content" />
+      <slot name="footer" />
+    </view>
+  </view>
+</block>
+<block wx:if="{{type == 'bottom'}}">
+  <view class="cu-modal bottom-modal {{show ?'show':''}}" bindtap="hideModal">
+    <view class="cu-dialog">
+      <view class="cu-bar bg-white">
+        <view class="action text-green">确定</view>
+        <view class="action text-blue" bindtap="hideModal">取消</view>
+      </view>
+      <slot />
+    </view>
+  </view>
+</block>
+<block wx:if="{{type == 'image'}}">
+  <view class="cu-modal {{show ?'show':''}}" bindtap="hideModal">
+    <view class="cu-dialog">
+      <view class="bg-img" style="background-image: url({{src}});height:200px;">
+        <view class="cu-bar justify-end text-white">
+          <view class="action" bindtap="hideModal">
+            <text class="cuIcon-close"></text>
+          </view>
+        </view>
+      </view>
+      <view class="cu-bar bg-white">
+        <view class="action margin-0 flex-sub  solid-left" bindtap="hideModal">{{prompt}}</view>
+      </view>
+    </view>
+  </view>
+</block>
+<block wx:if="{{type == 'pithy'}}">
+  <view class="cu-modal {{show ?'show':''}}" bindtap="hideModal">
+    <view class="cu-dialog" catchtap>
+      <slot />
+    </view>
+  </view>
+</block>
+<block wx:if="{{type == 'drawer'}}">
+  <view class="cu-modal drawer-modal justify-{{direction == 'right' ? 'end' : 'start'}} {{ show ?'show':''}}"
+    bindtap="hideModal">
+    <view class="cu-dialog basis-lg" catchtap style="top:{{CustomBar}}px;height:calc(100vh - {{CustomBar}}px)">
+      <view class="cu-list menu text-left">
+        <slot />
+      </view>
+    </view>
+  </view>
+</block>

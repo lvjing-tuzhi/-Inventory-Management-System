@@ -1,0 +1,51 @@
+<block wx:if="{{type == 'multi'}}">
+  <view class="cu-form-group">
+		<view class="title">{{label}}</view>
+		<picker mode="multiSelector" bindchange="multiChange" bindcolumnchange="multiColumnChange" value="{{multiIndex}}"
+		 range="{{multiArray}}">
+			<view class="picker">
+				{{multiArray[0][multiIndex[0]]}}，{{multiArray[1][multiIndex[1]]}}，{{multiArray[2][multiIndex[2]]}}
+			</view>
+		</picker>
+	</view>
+</block>
+<block wx:if="{{type == 'time'}}">
+	<view class="cu-form-group">
+		<view class="title">{{label}}</view>
+		<picker mode="time" value="{{time}}" start="{{start}}" end="{{end}}" bindchange="timeChange">
+			<view class="picker">
+				{{time}}
+			</view>
+		</picker>
+	</view>
+</block>
+<block wx:if="{{type == 'date'}}">
+	<view class="cu-form-group">
+		<view class="title">{{label}}</view>
+		<picker mode="date" value="{{date}}" start="{{start}}" end="{{end}}" bindchange="dateChange">
+			<view class="picker">
+				{{date}}
+			</view>
+		</picker>
+	</view>
+</block>
+<block wx:if="{{type == 'region'}}">
+  <view class="cu-form-group">
+  <view class="title">{{label}}</view>
+		<picker mode="region" bindchange="regionChange" value="{{region}}" custom-item="{{customItem}}">
+			<view class="picker">
+				{{region[0]}}，{{region[1]}}，{{region[2]}}
+			</view>
+    </picker>
+  </view>
+</block>
+<block wx:if="{{type == 'normal'}}">
+  <view class="cu-form-group {{extraClass}}">
+		<view class="title">{{label}}</view>
+		<picker bindchange="pickerChange" value="{{index}}" range="{{picker}}" id='{{id}}'>
+			<view class="picker">
+				{{index?picker[index]:'禁止换行，超出容器部分会以 ... 方式截断'}}
+			</view>
+		</picker>
+  </view>
+</block>

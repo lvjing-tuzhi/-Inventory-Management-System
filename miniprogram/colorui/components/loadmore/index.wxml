@@ -1,0 +1,6 @@
+<view class="layout">
+  <view class="line"></view>
+  <view class="rotate margin-right-xs"></view>
+  <text class="text-gray margin-right-xs">{{text}}</text>
+  <view class="line"></view>
+</view>

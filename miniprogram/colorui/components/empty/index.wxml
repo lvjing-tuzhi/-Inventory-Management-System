@@ -1,0 +1,4 @@
+<view wx:if="{{data.length == 0}}" class="empty">
+  <text class="cuIcon-searchlist text-gray icon"></text>
+  <view class="text-gray text">数据为空</view>
+</view>

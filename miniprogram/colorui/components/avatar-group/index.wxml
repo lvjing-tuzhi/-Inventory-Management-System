@@ -1,0 +1,4 @@
+<view class="cu-avatar-group">
+  <l-avatar round lg wx:for="{{data}}" src="{{item}}">
+  </l-avatar>
+</view>

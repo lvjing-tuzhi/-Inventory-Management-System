@@ -1,0 +1,5 @@
+<view class="cu-form-group {{extraClass}}">
+		<view class="title">{{label}}</view>
+		<input placeholder="{{placeholder}}" disabled="{{disabled}}" id='{{id}}' value='{{value}}' bindinput="setInput"></input>
+    <slot name="right"/>
+  </view>

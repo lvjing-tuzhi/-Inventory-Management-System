@@ -1,0 +1,25 @@
+.lucency{
+  position: absolute;
+  z-index: 1;
+}
+.nav{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+}
+.black{
+  background-color: #151515;
+}
+.white{
+  background-color: #fff !important;
+}
+.reload {
+  padding: 10rpx;
+  margin-left: 20rpx;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
+  width: 20rpx;
+  height: 20rpx;
+}

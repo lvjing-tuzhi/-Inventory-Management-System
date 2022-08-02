@@ -1,0 +1,3 @@
+<view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+  <slot/>
+</view>

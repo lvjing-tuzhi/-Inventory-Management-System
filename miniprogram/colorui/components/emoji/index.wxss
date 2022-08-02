@@ -1,0 +1,13 @@
+.emojis {
+  width: 710rpx;
+  padding: 20rpx 20rpx 40rpx 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  height: 240rpx;
+  justify-content: space-around;
+  overflow: auto;
+}
+
+.emoji {
+  margin: 8rpx;
+}

@@ -1,0 +1,13 @@
+<view class="cu-form-group solid-bottom">
+  <view class="grid col-3 grid-square flex-sub">
+    <view class="bg-img" wx:for="{{fileList}}" wx:key="{{index}}" bindtap="viewImage" data-url="{{fileList[index]}}">
+      <image src='{{fileList[index]}}' mode='aspectFill'></image>
+      <view class="cu-tag bg-red" catchtap="delImg" data-index="{{index}}">
+        <text class="cuIcon-close"></text>
+      </view>
+    </view>
+    <view class="solids" bindtap="chooseImage" wx:if="{{fileList.length<1}}">
+      <text class="cuIcon-cameraadd"></text>
+    </view>
+  </view>
+</view>

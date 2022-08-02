@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="bg-red radius text-center light title">
+    <view bindtap="last">上一月</view>
+    <view class="text-lg">{{year}}年{{month}}月{{today}}日</view>
+    <view bindtap="next">下一月</view>
+  </view>
+  <view class="main">
+    <view class="main-title">
+      <view>SUN</view>
+      <view>MON</view>
+      <view>TUE</view>
+      <view>WED</view>
+      <view>THU</view>
+      <view>FRI</view>
+      <view>SAT</view>
+    </view>
+    <view class="main-center">
+      <view wx:for="{{space}}"></view>
+      <view wx:for="{{day}}" data-today="{{item}}" bindtap="click" class="{{today == item? 'bg-olive padding radius light' : ''}}">
+        {{item}}
+      </view>
+    </view>
+  </view>
+</view>

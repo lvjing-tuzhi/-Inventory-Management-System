@@ -1,0 +1,3 @@
+<view class="flex {{extraClass}}">
+  <slot style="display:flex"/>
+</view>
