@@ -5,11 +5,14 @@ const selectRecord = require('./selectRecord/index');
 const updateRecord = require('./updateRecord/index');
 const sumRecord = require('./sumRecord/index');
 const insert = require('./dbutil/insert')
+const select = require('./dbutil/select')
 
 
 // 云函数入口函数
 exports.main = async (event, context) => {
   switch (event.type) {
+    case 'select':
+      return await select.main(event, context)
     case 'insert':
       return await insert.main(event, context);
     case 'getOpenId':

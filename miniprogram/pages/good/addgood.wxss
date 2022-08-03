@@ -1,0 +1,42 @@
+.iframe {
+    width: 100%;
+    height: 700rpx;
+    margin-top: 100rpx;
+}
+.back {
+    width: 100rpx;
+    height: 100rpx;
+    background-color: tomato;
+    font-size:medium;
+    border-radius: 20%;
+    color: #fff;
+    text-align: center;
+    line-height: 100rpx;
+    margin-left: 30rpx;
+}
+.item {
+    margin-top: 20rpx;
+    width: 564rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.lab {
+    margin-left: 60rpx;
+    font-size: medium;
+    width: 214rpx;
+}
+input {
+    background: #fff;
+}
+.btn {
+    width: 100rpx;
+    height: 100rpx;
+    background-color: tomato;
+    font-size:medium;
+    border-radius: 20%;
+    margin: 60rpx auto;
+    color: #fff;
+    text-align: center;
+    line-height: 100rpx;
+}

@@ -12,21 +12,20 @@ Page({
         console.log("执行支付事件");
     },
     add: function() {
-        console.log("执行商品入库中i")
-        wx.cloud.callFunction({
-            name: 'quickstartFunctions',
-            data: {
-              type: 'insert'
-            }
-          }).then(res => {
-              console.log(res)
-          }).catch(res => {
-            console.log(res)
-          })
-        console.log("商品入库后")
+      wx.navigateTo({
+        url: '../good/addgood'
+      })      
     },
     select: function() {
         console.log("查看库存");
+        wx.cloud.callFunction({
+          name: 'quickstartFunctions',
+          data: {
+            type: 'select'
+          }
+        }).then(res => {
+          console.log(res)
+        })
     },
 
     /**

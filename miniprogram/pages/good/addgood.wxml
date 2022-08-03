@@ -1,0 +1,24 @@
+<view class="iframe">
+    <view class="back" bindtouchstart="back">返回首页</view>
+    <view class="item">
+        <view class="lab">衣服名：</view>
+        <input type="text" auto-focus value="{{goods.name}}" bindinput="bindKeyInput" data-key="goods.name"/>
+    </view>
+   <view class="item">
+        <view class="lab">数量：</view>
+        <input type="number" value="{{goods.count}}"  bindinput="bindKeyInput" data-key="goods.count"/>
+   </view>
+    <view class="item">
+        <view class="lab">成本价：</view>
+        <input type="digit" value="{{goods.price}}"  bindinput="bindKeyInput" data-key="goods.price"/>
+    </view>
+    <view class="item">
+        <view class="lab">售卖价：</view>
+        <input type="digit" value="{{goods.sellPrice}}" bindinput="bindKeyInput" data-key="goods.sellPrice"/>
+    </view>
+    <view class="item">
+        <view class="lab">备注信息：</view>
+        <input type="text" value="{{goods.descript}}" bindinput="bindKeyInput" data-key="goods.descript"/>
+    </view>
+    <view class="btn" bindtouchstart="btnAdd">添加</view>
+</view>

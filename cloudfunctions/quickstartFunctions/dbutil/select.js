@@ -8,13 +8,5 @@ const db = cloud.database();
 // 查询数据库集合云函数入口函数
 exports.main = async (event, context) => {
   // 返回数据库查询结果
-  return await db.collection('goods').add({
-    data: {
-      name: event.name,
-      count: event.count,
-      price: event.price,
-      sellPrice: event.sellPrice,
-      descript: event.descript,
-    },
-  })
+  return await db.collection('goods').get();
 };
