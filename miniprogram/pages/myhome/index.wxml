@@ -3,5 +3,6 @@
         <view class="item" bindtouchstart="pay">支付</view>
         <view class="item" bindtouchstart="add">商品入库</view>
         <view class="item" bindtouchstart="select">查看库存</view>
+        <view class="item">信息统计</view>
     </view>
 </view>
