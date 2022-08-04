@@ -1,0 +1,22 @@
+<van-card wx:for="{{goods}}"
+    num="{{item.count}}"
+    title="{{item.name}}"
+    desc="{{item.describe}}"
+    price="{{item.price}}"
+    origin-price="{{item.sellPrice}}"
+    title-class="title"
+    custom-class="irame"
+    thumb-class="thumb"
+>
+    <view slot="footer">
+        <van-button
+        size="normal"
+        type="primary"
+        bind:click="update"
+        >修改</van-button>
+        <van-button
+         size="normal" type="warning" bind:click="delete"
+         data-id="{{item._id}}"
+        >删除</van-button>
+    </view>
+</van-card>

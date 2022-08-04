@@ -1,0 +1,10 @@
+.title {
+    font-size: large;
+}
+.irame {
+    /* height: 100rpx; */
+    border:1rpx solid red;
+}
+.thumb {
+    display: none;
+}

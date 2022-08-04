@@ -13,19 +13,22 @@ Page({
     },
     add: function() {
       wx.navigateTo({
-        url: '../good/addgood'
+        url: '../good/add/addgood'
       })      
     },
     select: function() {
         console.log("查看库存");
-        wx.cloud.callFunction({
-          name: 'quickstartFunctions',
-          data: {
-            type: 'select'
-          }
-        }).then(res => {
-          console.log(res)
+        wx.navigateTo({
+          url: '../good/select/index'
         })
+        // wx.cloud.callFunction({
+        //   name: 'quickstartFunctions',
+        //   data: {
+        //     type: 'select'
+        //   }
+        // }).then(res => {
+        //   console.log(res)
+        // })
     },
 
     /**

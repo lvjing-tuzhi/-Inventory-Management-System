@@ -6,11 +6,14 @@ const updateRecord = require('./updateRecord/index');
 const sumRecord = require('./sumRecord/index');
 const insert = require('./dbutil/insert')
 const select = require('./dbutil/select')
+const del = require('./dbutil/delete')
 
 
 // 云函数入口函数
 exports.main = async (event, context) => {
   switch (event.type) {
+    case 'del':
+      return await del.main(event, context)
     case 'select':
       return await select.main(event, context)
     case 'insert':
