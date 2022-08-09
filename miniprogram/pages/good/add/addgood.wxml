@@ -20,5 +20,6 @@
         <view class="lab">备注信息：</view>
         <input type="text" value="{{goods.descript}}" bindinput="bindKeyInput" data-key="goods.descript"/>
     </view>
-    <view class="btn" bindtouchstart="btnAdd">添加</view>
+    <view wx:if="{{btnType}}" class="btn" bindtouchstart="btnAdd">添加</view>
+    <view wx:else class="btn" bindtouchstart="btnUpdate">修改</view>
 </view>

@@ -10,6 +10,25 @@ Page({
 
     pay: function() {
         console.log("执行支付事件");
+        wx.cloud.callFunction({
+  name: '函数名',
+  data: {
+    // ...
+  },
+  success: res => {
+    const payment = res.result.payment
+    wx.requestPayment({
+      ...payment,
+      success (res) {
+        console.log('pay success', res)
+      },
+      fail (err) {
+        console.error('pay fail', err)
+      }
+    })
+  },
+  fail: console.error,
+})
     },
     add: function() {
       wx.navigateTo({

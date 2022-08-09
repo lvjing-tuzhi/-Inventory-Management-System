@@ -1,9 +1,9 @@
 <van-card wx:for="{{goods}}"
     num="{{item.count}}"
     title="{{item.name}}"
-    desc="{{item.describe}}"
-    price="{{item.price}}"
-    origin-price="{{item.sellPrice}}"
+    desc="{{item.descript}}"
+    price="{{item.sellPrice}}"
+    origin-price="{{item.price}}"
     title-class="title"
     custom-class="irame"
     thumb-class="thumb"
@@ -13,6 +13,7 @@
         size="normal"
         type="primary"
         bind:click="update"
+        data-id="{{item._id}}"
         >修改</van-button>
         <van-button
          size="normal" type="warning" bind:click="delete"

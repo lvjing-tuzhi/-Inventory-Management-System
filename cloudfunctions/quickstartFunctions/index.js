@@ -7,11 +7,19 @@ const sumRecord = require('./sumRecord/index');
 const insert = require('./dbutil/insert')
 const select = require('./dbutil/select')
 const del = require('./dbutil/delete')
+const selectById = require('./dbutil/selectById')
+const update = require('./dbutil/update')
 
 
 // 云函数入口函数
 exports.main = async (event, context) => {
   switch (event.type) {
+    case 'update':
+        console.log("开始更新")
+        console.log(event)
+        return await update.main(event, context)
+    case 'selectById':
+        return await selectById.main(event, context)
     case 'del':
       return await del.main(event, context)
     case 'select':

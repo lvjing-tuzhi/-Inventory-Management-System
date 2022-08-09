@@ -9,14 +9,16 @@ Page({
     },
 
     update(e) {
-        console.log(("开始更新跳转"))
         wx.navigateTo({
-          url: '../../good/add/addgood?goods'+this.data.goods,
+          url: '../../good/add/addgood?goodId='+e.currentTarget.dataset.id,
         })
     },
 
     delete: function(e) {
         console.log("开始删除")
+        wx.showLoading({
+            title: '删除中',
+          });
         console.log(e.currentTarget.dataset['id'])
         wx.cloud.callFunction({
             name: 'quickstartFunctions',
@@ -28,6 +30,7 @@ Page({
             console.log(res)
             console.log("删除成功")
             this.get()
+            wx.hideLoading();
         }).catch(res => {
             console.log("删除失败")
             console.log(res)
